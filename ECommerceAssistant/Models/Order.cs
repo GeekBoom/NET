@@ -1,5 +1,4 @@
 using System;
-
 namespace ECommerceAssistant.Models
 {
     public class Order
@@ -12,41 +11,6 @@ namespace ECommerceAssistant.Models
         public decimal TotalAmount { get; set; }
         public string Status { get; set; }
         public DateTime CreatedAt { get; set; }
-
-        public Order()
-        {
-            OrderNo = string.Empty;
-            ProductName = string.Empty;
-            Status = "待处理";
-            CreatedAt = DateTime.Now;
-        }
+        public Order() { OrderNo = string.Empty; ProductName = string.Empty; Status = "\u5f85\u5904\u7406"; CreatedAt = DateTime.Now; }
     }
-}
-using System.ComponentModel.DataAnnotations;
-
-namespace ECommerceAssistant.Models;
-
-public class Order
-{
-    [Key]
-    public int Id { get; set; }
-
-    [Required]
-    [MaxLength(50)]
-    public string OrderNo { get; set; } = string.Empty;
-
-    public int ProductId { get; set; }
-
-    [Required]
-    [MaxLength(100)]
-    public string ProductName { get; set; } = string.Empty;
-
-    public int Quantity { get; set; }
-
-    public decimal TotalAmount { get; set; }
-
-    [MaxLength(20)]
-    public string Status { get; set; } = "待处理"; // 待处理 / 已完成 / 已取消
-
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
 }
