@@ -1,0 +1,15 @@
+# .NET build output (bin/obj)
+bin/
+obj/
+
+# Large executable (exceeds GitHub 100MB limit)
+publish/*.exe
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# OS files
+Thumbs.db
+.DS_Store
